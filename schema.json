@@ -61,6 +61,12 @@
           "position": 2,
           "name": "About",
           "item": "https://seaccollege.github.io/about"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Academics",
+          "item": "https://seaccollege.github.io/academics"
         }
       ]
     }

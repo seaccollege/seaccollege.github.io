@@ -1,0 +1,25 @@
+---
+import CourseSection from "../articles/courses/CourseSection.astro";
+import DepartmentSection from "../articles/Departments/DepartmentSection.astro";
+import SyllabusSection from "../articles/syllabus/SyllabusSection.astro";
+import ExaminationSection from "../articles/examinations/ExaminationSection.astro";
+import AcademicsCalendarSection from "../articles/calendar/AcademicsCalendarSection.astro";
+import PublicationSection from "../articles/publications/PublicationSection.astro";
+---
+
+<body>
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Programs Section -->
+         <CourseSection />
+         <DepartmentSection />
+         <SyllabusSection />
+         <ExaminationSection />
+         <AcademicsCalendarSection />
+        <PublicationSection />
+    </main>
+</body>
+
+<style>
+    @import "../../styles/academics-page.css";
+</style>

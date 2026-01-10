@@ -1,10 +1,7 @@
 <template>
     <section id="home" class="hero" aria-labelledby="hero-title">
         <div class="hero-content">
-            <slot>
-                <h1 id="hero-title">SEAC College</h1>
-                <p class="lead">Learning for life — discover our programs below.</p>
-            </slot>
+            <slot/>
         </div>
         <button class="scroll-indicator" @click="scrollToPrograms" aria-label="Scroll to programs">
             <i class="fas fa-chevron-down" aria-hidden="true"></i>
@@ -22,7 +19,7 @@ const scrollToPrograms = () => {
 <style scoped>
 /* Hero Section */
 .hero {
-    background: url("assets/images/background.jpg") center/cover no-repeat fixed;
+    background: url("images/background.jpg") center/cover no-repeat fixed;
     color: white;
     padding: 0;
     text-align: center;
@@ -49,7 +46,7 @@ const scrollToPrograms = () => {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    /* max-width: 800px; */
     margin: 0 auto;
     text-align: center;
 }
@@ -87,5 +84,4 @@ const scrollToPrograms = () => {
     font-size: 2rem;
     color: white;
 }
-
 </style>

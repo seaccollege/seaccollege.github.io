@@ -3,6 +3,7 @@
     list-style: none;
     gap: 2rem;
     align-items: center;
+    z-index: 1;
 }
 
 .nav-links a {

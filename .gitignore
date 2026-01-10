@@ -75,6 +75,8 @@ web_modules/
 .cache
 .parcel-cache
 
+GitGuardian
+
 # Next.js build output
 .next
 out
@@ -143,7 +145,8 @@ vite.config.ts.timestamp-*
 bugs
 
 # Backup files
-backups
+backup
+Backups
 *.bak
 
 # build output

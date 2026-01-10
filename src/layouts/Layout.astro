@@ -1,11 +1,13 @@
 ---
 import Header from "../components/Header.astro";
+import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import ToastContainer from "../components/ToastContainer.vue";
-import "../styles/global.css";
+import ScrollTop from "../components/widgets/ScrollTop.svelte";
+import LoadingOverlay from "../components/widgets/LoadingOverlay.svelte";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -17,7 +19,10 @@ import "../styles/global.css";
 		<!--#region Primary Meta Tags -->
 		<title>South Eastern Arabic College</title>
 		<meta name="title" content="South Eastern Arabic College" />
-		<meta name="description" content="South Eastern Arabic College is a distinguished institution dedicated to excellence in the teaching of the Arabic language, Qur’anic sciences, Hadith, and Islamic studies">
+		<meta
+			name="description"
+			content="South Eastern Arabic College is a distinguished institution dedicated to excellence in the teaching of the Arabic language, Qur’anic sciences, Hadith, and Islamic studies"
+		/>
 		<meta
 			name="keywords"
 			content="South Eastern Arabic College, seaccollege, arabic, primary education, higher education, university programs, college courses, online learning, career education"
@@ -33,8 +38,11 @@ import "../styles/global.css";
 		<!--#region Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://seaccollege.github.io/" />
-		<meta property="og:title" content="South Eastern Arabic College">
-	    <meta property="og:description" content="South Eastern Arabic College is a distinguished institution dedicated to excellence in the teaching of the Arabic language, Qur’anic sciences, Hadith, and Islamic studies">
+		<meta property="og:title" content="South Eastern Arabic College" />
+		<meta
+			property="og:description"
+			content="South Eastern Arabic College is a distinguished institution dedicated to excellence in the teaching of the Arabic language, Qur’anic sciences, Hadith, and Islamic studies"
+		/>
 		<meta
 			property="og:image"
 			content="https://seaccollege.github.io/images/icon/icon-512x512.png"
@@ -48,8 +56,14 @@ import "../styles/global.css";
 		<!--#region Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content="https://seaccollege.github.io/" />
-		<meta property="twitter:title" content="South Eastern Arabic College - Excellence in Education">
-	    <meta property="twitter:description" content="South Eastern Arabic College is a distinguished institution dedicated to excellence in the teaching of the Arabic language, Qur’anic sciences, Hadith, and Islamic studies">
+		<meta
+			property="twitter:title"
+			content="South Eastern Arabic College - Excellence in Education"
+		/>
+		<meta
+			property="twitter:description"
+			content="South Eastern Arabic College is a distinguished institution dedicated to excellence in the teaching of the Arabic language, Qur’anic sciences, Hadith, and Islamic studies"
+		/>
 		<meta
 			property="twitter:image"
 			content="https://seaccollege.github.io/images/icon/icon-512x512.png"
@@ -73,8 +87,16 @@ import "../styles/global.css";
 		<!--#region Favicons -->
 		<link rel="apple-touch-icon" href="images/icon/icon-192x192.png" />
 
-		<link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
-		<link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="images/favicon/favicon.svg"
+		/>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="images/favicon/favicon.ico"
+		/>
 		<link
 			rel="icon"
 			type="image/png"
@@ -107,7 +129,7 @@ import "../styles/global.css";
 			rel="sitemap"
 			type="application/xml"
 			title="Sitemap"
-			href="sitemap-index.xml"
+			href="sitemap.xml"
 		/>
 		<!--#endregion -->
 
@@ -118,8 +140,16 @@ import "../styles/global.css";
 			crossorigin
 		/>
 		<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-		<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="all" />
+		<link
+			rel="preload"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			as="style"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			media="all"
+		/>
 		<!--#endregion -->
 
 		<!--#region Structured Data -->
@@ -149,30 +179,25 @@ import "../styles/global.css";
 	</head>
 
 	<body>
-		<!-- Loading Overlay -->
-		<!-- <LoadingOverlay /> -->
+		<LoadingOverlay />
 
 		<!-- Skip to main content for accessibility -->
 		<!-- <SkipToMainComponent /> -->
 
-		<!-- Header -->
 		<Header />
-
-		<main class="min-h-screen pb-28">
-			<slot />
-		</main>
+		<slot />
 
 		<!-- Scroll to Top Button -->
-		<!-- <ScrollTop /> -->
+		<ScrollTop />
 
 		<!-- Toast Container -->
 		<ToastContainer />
 
-		<!-- Footer -->
 		<Footer />
-
 	</body>
 	<script src="/js/script.js" defer></script>
+	<script src="/js/sw-client.js" defer></script>
+	<script src="/js/toast-container.js" defer></script>
 </html>
 
 <style></style>

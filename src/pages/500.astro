@@ -8,7 +8,7 @@ export const prerender = true;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="South Eastern Arabic College - Server Error" />
   <title>500 - Server Error | South Eastern Arabic College</title>
-  <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="https://seaccollege.github.io/images/favicon/favicon.ico" />
   <meta name="theme-color" content="#667eea">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -62,7 +62,7 @@ export const prerender = true;
     const countdownElement = document.getElementById('countdown');
     const countdownInterval = setInterval(() => {
       countdown--;
-      if (countdownElement) countdownElement.textContent = countdown;
+      if (countdownElement) countdownElement.textContent = String(countdown);
       if (countdown <= 0) { clearInterval(countdownInterval); location.reload(); }
     }, 1000);
   </script>

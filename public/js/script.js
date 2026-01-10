@@ -1,29 +1,32 @@
 // Toast Notification System
-function showToast(message, type = 'info', duration = 5000) {
-    const container = document.getElementById('toastContainer');
+if (typeof window.showToast !== 'function') {
+    window.showToast = function (message, type = 'info', duration = 5000) {
+        const container = document.getElementById('toastContainer');
+        if (!container) return;
 
-    // Create toast element
-    const toast = document.createElement('div');
-    toast.className = `toast ${type}`;
+        // Create toast element
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
 
-    // Icon mapping
-    const icons = {
-        success: 'fa-check-circle',
-        error: 'fa-exclamation-circle',
-        warning: 'fa-exclamation-triangle',
-        info: 'fa-info-circle'
+        // Icon mapping
+        const icons = {
+            success: 'fa-check-circle',
+            error: 'fa-exclamation-circle',
+            warning: 'fa-exclamation-triangle',
+            info: 'fa-info-circle'
+        };
+
+        const icon = icons[type] || icons.info;
+        toast.innerHTML = `<i class="fas ${icon}"></i><span>${message}</span>`;
+
+        // Add to container
+        container.appendChild(toast);
+
+        // Remove after duration
+        setTimeout(() => {
+            try { toast.remove(); } catch (e) { }
+        }, duration);
     };
-
-    const icon = icons[type] || icons.info;
-    toast.innerHTML = `<i class="fas ${icon}"></i><span>${message}</span>`;
-
-    // Add to container
-    container.appendChild(toast);
-
-    // Remove after duration
-    setTimeout(() => {
-        toast.remove();
-    }, duration);
 }
 
 // Safe localStorage access wrapper

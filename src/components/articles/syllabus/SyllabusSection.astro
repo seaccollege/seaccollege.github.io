@@ -1,0 +1,29 @@
+---
+import Syllabus1 from "./Syllabus1.astro";
+import Syllabus2 from "./Syllabus2.astro";
+import Syllabus3 from "./Syllabus3.astro";
+import Syllabus4 from "./Syllabus4.astro";
+import Syllabus5 from "./Syllabus5.astro";
+import Syllabus6 from "./Syllabus6.astro";
+---
+
+<section id="programs" aria-labelledby="programs-title">
+    <h2 id="programs-title">Courses &amp; Syllabus</h2>
+    <p>
+        Courses are designed to provide systematic learning from beginner to
+        advanced levels. The syllabus covers both Arabic language and Islamic
+        studies.
+    </p>
+    <div class="programs-grid" role="list">
+        <Syllabus1 />
+        <Syllabus2 />
+        <Syllabus3 />
+        <Syllabus4 />
+        <Syllabus5 />
+        <Syllabus6 />
+    </div>
+</section>
+
+<style>
+    @import "../../../styles/academics-page.css";
+</style>

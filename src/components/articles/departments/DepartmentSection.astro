@@ -1,0 +1,26 @@
+---
+import Department1 from "./Department1.astro";
+import Department2 from "./Department2.astro";
+import Department3 from "./Department3.astro";
+import Department4 from "./Department4.astro";
+import Department5 from "./Department5.astro";
+---
+
+<section id="programs" aria-labelledby="programs-title">
+    <h2 id="programs-title">Departments</h2>
+    <p>
+        Our departments provide specialized guidance and ensure comprehensive
+        learning in all areas of study:
+    </p>
+    <div class="programs-grid" role="list">
+        <Department1 />
+        <Department2 />
+        <Department3 />
+        <Department4 />
+        <Department5 />
+    </div>
+</section>
+
+<style>
+    @import "../../../styles/academics-page.css";
+</style>

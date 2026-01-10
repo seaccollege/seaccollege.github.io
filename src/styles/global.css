@@ -5,7 +5,9 @@
     --primary-color: #667eea;
     --secondary-color: #764ba2;
     --bg-color: #ffffff;
+    --bg-color-hover: #000000;
     --text-color: #333333;
+    --text-color-hover: #ffffff;
     --text-secondary: #666666;
     --card-bg: #ffffff;
     --card-shadow: rgba(0, 0, 0, 0.1);
@@ -20,7 +22,9 @@
     --primary-color: #8b9dff;
     --secondary-color: #9370db;
     --bg-color: #1a1a2e;
+    --bg-color-hover: #f0f0f0;
     --text-color: #eaeaea;
+    --text-color-hover: #000000;
     --text-secondary: #b0b0b0;
     --card-bg: #16213e;
     --card-shadow: rgba(0, 0, 0, 0.3);
@@ -47,7 +51,6 @@ body {
     transition: background-color var(--transition-speed), color var(--transition-speed);
     overflow-x: hidden;
 }
-
 
 .cta-button {
     display: inline-block;
@@ -143,36 +146,6 @@ footer a:hover {
     opacity: 0.8;
 }
 
-/* Scroll to Top Button */
-.scroll-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transition: all var(--transition-speed);
-    z-index: 999;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.scroll-top.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-.scroll-top:hover {
-    background: var(--secondary-color);
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-}
 
 /* Loading Animation */
 .loading-overlay {
@@ -411,13 +384,6 @@ footer a:hover {
         gap: 1.5rem;
     }
 
-    .scroll-top {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-        bottom: 20px;
-        right: 20px;
-    }
 
     section {
         padding: 3rem 1rem;
@@ -458,7 +424,6 @@ footer a:hover {
 
     header,
     footer,
-    .scroll-top,
     .theme-toggle,
     .mobile-menu-toggle {
         display: none;

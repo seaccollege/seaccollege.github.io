@@ -1,0 +1,27 @@
+---
+import Exam1 from "./Exam1.astro";
+import Exam2 from "./Exam2.astro";
+import Exam3 from "./Exam3.astro";
+import Exam4 from "./Exam4.astro";
+import Exam5 from "./Exam5.astro";
+import Exam6 from "./Exam6.astro";
+---
+
+<section id="programs" aria-labelledby="programs-title">
+    <h2 id="programs-title">Examinations &amp; Assessments</h2>
+    <p>
+        Assessment at South Eastern Arabic College is <strong>continuous and holistic</strong>. Students are evaluated through:
+    </p>
+    <div class="programs-grid" role="list">
+        <Exam1 />
+        <Exam2 />
+        <Exam3 />
+        <Exam4 />
+        <Exam5 />
+        <Exam6 />
+    </div>
+</section>
+
+<style>
+    @import "../../../styles/academics-page.css";
+</style>

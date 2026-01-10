@@ -1,0 +1,47 @@
+/* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-speed);
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    background: var(--secondary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    .scroll-top {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .scroll-top {
+        display: none;
+    }
+}

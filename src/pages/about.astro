@@ -1,16 +1,22 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import AboutPageDetails from "../components/contents/about-page-contents.astro";
+import HomeLayout from "../layouts/HomeLayout.astro";
+import AboutPageContents from "../components/contents/about-page-contents.astro";
 ---
 
-<Layout title="Data Binding Example">
+<HomeLayout title="About South Eastern Arabic College" description="Learn more about South Eastern Arabic College, our mission, values, and the services we provide to the community.">
     <main id="main-content" role="main">
-        <AboutPageDetails />
+        <AboutPageContents />
     </main>
-</Layout>
+</HomeLayout>
 
 <style>
     main {
         padding: 3rem;
+    }
+
+    @media (max-width: 768px) {
+        main {
+            padding: 1rem;
+        }
     }
 </style>

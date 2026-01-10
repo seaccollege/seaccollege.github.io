@@ -3,13 +3,19 @@
     display: none;
     background: none;
     border: none;
-    color: white;
+    color: var(--bg-color);
     font-size: 1.5rem;
     cursor: pointer;
     padding: 0.5rem;
-    transition: transform var(--transition-speed);
+    transition: transform var(--transition-speed), color var(--transition-speed);
+    transform: rotate(0deg);
+    z-index:3;
 }
 
-.mobile-menu-toggle:hover {
-    transform: rotate(90deg);
+.mobile-menu-toggle:hover,
+.mobile-menu-toggle:focus,
+.mobile-menu-toggle:active,
+.mobile-menu-toggle.open,
+.mobile-menu-toggle.open:hover {
+    color: var(--bg-color-hover);
 }
