@@ -52,6 +52,11 @@ body {
     overflow-x: hidden;
 }
 
+.under-process {
+    font-style: italic;
+    color: #d97706;
+}
+
 .cta-button {
     display: inline-block;
     padding: 1rem 2.5rem;
