@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="South Eastern Arabic College - Page Not Found">
+    <title>404 - Page Not Found | South Eastern Arabic College</title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- <link rel="manifest" href="manifest.json"> -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="error-style.css">
+
+    <style>
+        .error-code {
+            animation: bounce 2s infinite;
+        }
+
+        .suggestions {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .suggestions h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .suggestions ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .suggestions li {
+            margin: 0.5rem 0;
+        }
+
+        .suggestions a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            display: inline-block;
+        }
+
+        .suggestions a:hover {
+            opacity: 0.8;
+            transform: translateX(5px);
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div class="error-code">404</div>
+        <h1>Oops! Page Not Found</h1>
+        <p>The page you're looking for seems to have gone on a learning adventure. It might have been moved, deleted, or perhaps it never existed.</p>
+
+        <div class="button-group">
+            <a href="/" class="btn">
+                <i class="fas fa-home"></i> Go Home
+            </a>
+            <a href="javascript:history.back()" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Go Back
+            </a>
+        </div>
+
+    </div>
+
+    <script>
+        // Log 404 error for analytics
+        console.log('404 Error: Page not found -', window.location.href);
+        
+        // Optional: Send 404 to analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'exception', {
+                'description': '404 - Page Not Found: ' + window.location.pathname,
+                'fatal': false
+            });
+        }
+    </script>
+</body>
+</html>

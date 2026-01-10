@@ -1,0 +1,24 @@
+.logo-badge {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transition: all var(--transition-speed) ease;
+    cursor: pointer;
+}
+
+.logo-badge:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo-badge img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}

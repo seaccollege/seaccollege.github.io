@@ -1,0 +1,68 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://seaccollege.github.io/#organization",
+      "name": "South Eastern Arabic College",
+      "alternateName": "SEAC College",
+      "url": "https://seaccollege.github.io",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://seaccollege.github.io/images/icon/icon-512x512.png",
+        "width": 512,
+        "height": 512
+      },
+      "description": "South Eastern Arabic College is a distinguished institution dedicated to excellence in the teaching of the Arabic language, Qur’anic sciences, Hadith, and Islamic studies",
+      "sameAs": [
+        "https://seaccollege.github.io"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://seaccollege.github.io/#website",
+      "url": "https://seaccollege.github.io",
+      "name": "South Eastern Arabic College",
+      "description": "South Eastern Arabic College is a distinguished institution dedicated to excellence in the teaching of the Arabic language, Qur’anic sciences, Hadith, and Islamic studies",
+      "publisher": {
+        "@id": "https://seaccollege.github.io/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://seaccollege.github.io/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://seaccollege.github.io/#webpage",
+      "url": "https://seaccollege.github.io",
+      "name": "South Eastern Arabic College",
+      "isPartOf": {
+        "@id": "https://seaccollege.github.io/#website"
+      },
+      "about": {
+        "@id": "https://seaccollege.github.io/#organization"
+      },
+      "description": "South Eastern Arabic College is a distinguished institution dedicated to excellence in the teaching of the Arabic language, Qur’anic sciences, Hadith, and Islamic studies",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://seaccollege.github.io"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://seaccollege.github.io/about"
+        }
+      ]
+    }
+  ]
+}

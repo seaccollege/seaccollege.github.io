@@ -1,0 +1,15 @@
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform var(--transition-speed);
+}
+
+.mobile-menu-toggle:hover {
+    transform: rotate(90deg);
+}

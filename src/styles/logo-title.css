@@ -1,0 +1,12 @@
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    transition: transform var(--transition-speed);
+    margin-left: 2rem;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}

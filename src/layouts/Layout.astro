@@ -1,0 +1,178 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ToastContainer from "../components/ToastContainer.vue";
+import "../styles/global.css";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<meta name="generator" content={Astro.generator} />
+
+		<!--#region Primary Meta Tags -->
+		<title>South Eastern Arabic College</title>
+		<meta name="title" content="South Eastern Arabic College" />
+		<meta name="description" content="South Eastern Arabic College is a distinguished institution dedicated to excellence in the teaching of the Arabic language, Qur’anic sciences, Hadith, and Islamic studies">
+		<meta
+			name="keywords"
+			content="South Eastern Arabic College, seaccollege, arabic, primary education, higher education, university programs, college courses, online learning, career education"
+		/>
+		<meta name="author" content="South Eastern Arabic College" />
+		<meta
+			name="robots"
+			content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+		/>
+		<link rel="canonical" href="https://seaccollege.github.io/" />
+		<!--#endregion -->
+
+		<!--#region Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://seaccollege.github.io/" />
+		<meta property="og:title" content="South Eastern Arabic College">
+	    <meta property="og:description" content="South Eastern Arabic College is a distinguished institution dedicated to excellence in the teaching of the Arabic language, Qur’anic sciences, Hadith, and Islamic studies">
+		<meta
+			property="og:image"
+			content="https://seaccollege.github.io/images/icon/icon-512x512.png"
+		/>
+		<meta property="og:image:width" content="512" />
+		<meta property="og:image:height" content="512" />
+		<meta property="og:site_name" content="South Eastern Arabic College" />
+		<meta property="og:locale" content="en_US" />
+		<!--#endregion -->
+
+		<!--#region Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://seaccollege.github.io/" />
+		<meta property="twitter:title" content="South Eastern Arabic College - Excellence in Education">
+	    <meta property="twitter:description" content="South Eastern Arabic College is a distinguished institution dedicated to excellence in the teaching of the Arabic language, Qur’anic sciences, Hadith, and Islamic studies">
+		<meta
+			property="twitter:image"
+			content="https://seaccollege.github.io/images/icon/icon-512x512.png"
+		/>
+		<!--#endregion -->
+
+		<!--#region PWA Meta Tags -->
+		<meta name="theme-color" content="#667eea" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta
+			name="apple-mobile-web-app-status-bar-style"
+			content="black-translucent"
+		/>
+		<meta
+			name="apple-mobile-web-app-title"
+			content="South Eastern Arabic College"
+		/>
+		<link rel="manifest" href="manifest.json" />
+		<!-- #endregion -->
+
+		<!--#region Favicons -->
+		<link rel="apple-touch-icon" href="images/icon/icon-192x192.png" />
+
+		<link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+		<link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="images/favicon/favicon-16x16.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="images/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="images/icon/icon-192x192.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="512x512"
+			href="images/icon/icon-512x512.png"
+		/>
+		<link rel="shortcut icon" href="images/favicon/favicon.ico" />
+		<!-- #endregion -->
+
+		<!--#region Sitemap -->
+		<link
+			rel="sitemap"
+			type="application/xml"
+			title="Sitemap"
+			href="sitemap-index.xml"
+		/>
+		<!--#endregion -->
+
+		<!--#region Performance Optimizations -->
+		<link
+			rel="preconnect"
+			href="https://cdnjs.cloudflare.com"
+			crossorigin
+		/>
+		<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+		<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="all" />
+		<!--#endregion -->
+
+		<!--#region Structured Data -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "EducationalOrganization",
+				"name": "South Eastern Arabic College",
+				"alternateName": "SEAC College",
+				"url": "https://seaccollege.github.io",
+				"logo": "https://seaccollege.github.io/images/icon/icon-512x512.png",
+				"description": "South Eastern Arabic College is a distinguished institution dedicated to excellence in the teaching of the Arabic language, Qur’anic sciences, Hadith, and Islamic studies",
+				"sameAs": ["https://seaccollege.github.io"]
+			}
+		</script>
+		<!--#endregion -->
+
+		<!--#region Error Handling -->
+		<script>
+			// Handle unhandled promise rejections
+			window.addEventListener("unhandledrejection", (event) => {
+				console.error("Unhandled promise rejection:", event.reason);
+				event.preventDefault();
+			});
+		</script>
+		<!--#endregion -->
+	</head>
+
+	<body>
+		<!-- Loading Overlay -->
+		<!-- <LoadingOverlay /> -->
+
+		<!-- Skip to main content for accessibility -->
+		<!-- <SkipToMainComponent /> -->
+
+		<!-- Header -->
+		<Header />
+
+		<main class="min-h-screen pb-28">
+			<slot />
+		</main>
+
+		<!-- Scroll to Top Button -->
+		<!-- <ScrollTop /> -->
+
+		<!-- Toast Container -->
+		<ToastContainer />
+
+		<!-- Footer -->
+		<Footer />
+
+	</body>
+	<script src="/js/script.js" defer></script>
+</html>
+
+<style></style>

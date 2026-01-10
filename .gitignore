@@ -69,6 +69,7 @@ web_modules/
 .env
 .env.*
 !.env.example
+!.env.production
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -137,3 +138,25 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+.fetch-client
+bugs
+
+# Backup files
+backups
+*.bak
+
+# build output
+dist/
+
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/

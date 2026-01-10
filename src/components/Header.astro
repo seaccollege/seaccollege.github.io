@@ -1,0 +1,23 @@
+---
+import MobileMenuToggle from "../components/widgets/MobileMenuToggle.svelte";
+import NavLinks from "../components/NavLinks.astro";
+import LogoBadge from "../components/LogoBadge.astro";
+import LogoTitle from "../components/LogoTitle.jsx";
+---
+
+<header role="banner" id="header">
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="header-logo-badge">
+            <a href = "/">
+                <LogoBadge />
+            </a>
+        </div>
+        <LogoTitle />
+        <MobileMenuToggle />
+        <NavLinks />
+    </nav>
+</header>
+
+<style>
+    @import "../styles/header.css";
+</style>
