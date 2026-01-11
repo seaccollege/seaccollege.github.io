@@ -19,7 +19,7 @@ const scrollToPrograms = () => {
 <style scoped>
 /* Hero Section */
 .hero {
-    background: url("images/background.jpg") center/cover no-repeat fixed;
+    background: url("/images/background.jpg") center/cover no-repeat fixed;
     color: white;
     padding: 0;
     text-align: center;

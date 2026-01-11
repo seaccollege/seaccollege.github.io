@@ -81,47 +81,47 @@ import LoadingOverlay from "../components/widgets/LoadingOverlay.svelte";
 			name="apple-mobile-web-app-title"
 			content="South Eastern Arabic College"
 		/>
-		<link rel="manifest" href="manifest.json" />
+		<link rel="manifest" href="/manifest.json" />
 		<!-- #endregion -->
 
 		<!--#region Favicons -->
-		<link rel="apple-touch-icon" href="images/icon/icon-192x192.png" />
+		<link rel="apple-touch-icon" href="/images/icon/icon-192x192.png" />
 
 		<link
 			rel="icon"
 			type="image/svg+xml"
-			href="images/favicon/favicon.svg"
+			href="/images/favicon/favicon.svg"
 		/>
 		<link
 			rel="icon"
 			type="image/x-icon"
-			href="images/favicon/favicon.ico"
+			href="/images/favicon/favicon.ico"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="16x16"
-			href="images/favicon/favicon-16x16.png"
+			href="/images/favicon/favicon-16x16.png"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
-			href="images/favicon/favicon-32x32.png"
+			href="/images/favicon/favicon-32x32.png"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="192x192"
-			href="images/icon/icon-192x192.png"
+			href="/images/icon/icon-192x192.png"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="512x512"
-			href="images/icon/icon-512x512.png"
+			href="/images/icon/icon-512x512.png"
 		/>
-		<link rel="shortcut icon" href="images/favicon/favicon.ico" />
+		<link rel="shortcut icon" href="/images/favicon/favicon.ico" />
 		<!-- #endregion -->
 
 		<!--#region Sitemap -->
@@ -129,27 +129,13 @@ import LoadingOverlay from "../components/widgets/LoadingOverlay.svelte";
 			rel="sitemap"
 			type="application/xml"
 			title="Sitemap"
-			href="sitemap.xml"
+			href="/sitemap.xml"
 		/>
 		<!--#endregion -->
 
-		<!--#region Performance Optimizations -->
-		<link
-			rel="preconnect"
-			href="https://cdnjs.cloudflare.com"
-			crossorigin
-		/>
-		<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-		<link
-			rel="preload"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-			as="style"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-			media="all"
-		/>
+		<!--#region Performance Optimizations (local Font Awesome for offline) -->
+		<link rel="preload" href="/vendor/fontawesome/css/all.min.css" as="style" />
+		<link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css" media="all" />
 		<!--#endregion -->
 
 		<!--#region Structured Data -->

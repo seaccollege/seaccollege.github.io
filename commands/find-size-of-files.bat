@@ -1,0 +1,2 @@
+cd ..
+node -e "const fs=require('fs'),path=require('path');function walk(d){fs.readdirSync(d,{withFileTypes:true}).forEach(ent=>{const p=path.join(d,ent.name);try{if(ent.isDirectory()) walk(p); else{const s=fs.statSync(p); if(s.size>5*1024*1024) console.log(p+'  '+(s.size/1024/1024).toFixed(2)+'MB');}}catch(e){}});}walk(process.cwd());"

@@ -1,7 +1,7 @@
 {
   "name": "seaccollege",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "dev": "astro dev",
     "dev:no-cache": "astro dev --no-cache",
@@ -12,10 +12,11 @@
     "clear": "pnpm store prune",
     "npm-clear": "npm cache clean --force",
     "pnpm-install": "pnpm install",
-    "astro-upgrade": " pnpm dlx @astrojs/upgrade"
+    "astro-upgrade": " pnpm dlx @astrojs/upgrade",
+    "copy:fontawesome": "node scripts/copy-fontawesome.js"
   },
   "dependencies": {
-    "@analogjs/astro-angular": "^2.0.5",
+    "@analogjs/astro-angular": "^2.2.1",
     "@angular/animations": "^20.3.12",
     "@angular/build": "^20.3.10",
     "@angular/common": "^20.3.12",
@@ -29,6 +30,7 @@
     "@astrojs/sitemap": "3.6.1",
     "@astrojs/svelte": "7.2.5",
     "@astrojs/vue": "5.1.4",
+    "@fortawesome/fontawesome-free": "^7.1.0",
     "@tailwindcss/vite": "^4.1.17",
     "@types/react": "^19.2.6",
     "@types/react-dom": "^19.2.3",
@@ -41,5 +43,10 @@
     "tslib": "^2.8.1",
     "typescript": "^5.9.3",
     "vue": "^3.5.24"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^6.2.4",
+    "@sveltejs/vite-plugin-svelte-inspector": "^5.0.2",
+    "cross-env": "^7.0.3"
   }
 }

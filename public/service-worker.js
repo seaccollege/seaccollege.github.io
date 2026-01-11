@@ -7,13 +7,10 @@ const urlsToCache = [
   '/',
   '/index.html',
   '/manifest.json',
-  '/404',
-  '/500',
   '/html/error/404.html',
   '/html/error/500.html',
-  '/css/error/error-style.css',
+  '/html/error/error-style.css',
   '/html/error/favicon.ico',
-  '/css/all.min.css',
   '/images/favicon/favicon.ico',
   '/images/icon/icon-512x512.png',
   '/images/icon/icon-192x192.png',
@@ -22,7 +19,13 @@ const urlsToCache = [
   '/images/favicon/favicon-16x16.png',
   '/images/logo.png',
   '/images/background.jpg',
-  'http://seaccollege.github.io/images/favicon/favicon.ico',
+  '/js/script.js',
+  '/js/sw-client.js',
+  '/js/toast-container.js',
+  '/vendor/fontawesome/css/all.min.css',
+  '/vendor/fontawesome/webfonts/fa-solid-900.woff2',
+  '/vendor/fontawesome/webfonts/fa-regular-400.woff2',
+  '/vendor/fontawesome/webfonts/fa-brands-400.woff2'
 ];
 
 // Install Service Worker (resilient caching)
@@ -98,14 +101,44 @@ self.addEventListener('fetch', (event) => {
   if (req.mode === 'navigate') {
     event.respondWith((async () => {
       try {
-        const networkResponse = await fetch(req);
-        // Cache updated index.html
-        const cache = await caches.open(PRECACHE);
-        cache.put('/index.html', networkResponse.clone()).catch(() => {});
-        return networkResponse;
+          const networkResponse = await fetch(req);
+          // Only update the precached index when the navigation is for the site root
+          try {
+            const url = new URL(req.url);
+            if (url.pathname === '/' || url.pathname === '/index.html') {
+              const cache = await caches.open(PRECACHE);
+              cache.put('/index.html', networkResponse.clone()).catch(() => {});
+            }
+          } catch (e) {
+            // If URL parsing fails, skip caching to avoid corrupting the precache
+          }
+
+          // Cache the full navigation response under its own request URL so
+          // offline navigations can return the exact page the user visited.
+          try {
+            if (networkResponse && networkResponse.ok) {
+              const navUrl = new URL(req.url);
+              if (navUrl.origin === self.location.origin) {
+                const runtimeCache = await caches.open(RUNTIME);
+                // Use the original request so later caches.match(req) can find it
+                runtimeCache.put(req, networkResponse.clone()).catch(() => {});
+                trimCache(RUNTIME, MAX_RUNTIME_ENTRIES).catch(() => {});
+              }
+            }
+          } catch (e) {
+            // ignore errors during runtime caching
+          }
+
+          return networkResponse;
       } catch (err) {
-        const cached = await caches.match('/index.html');
-        if (cached) return cached;
+        // Prefer an exact cached match for the requested navigation URL first,
+        // then try site root, then index.html, then the error page.
+        const cachedExact = await caches.match(req);
+        if (cachedExact) return cachedExact;
+        const cachedRoot = await caches.match('/');
+        if (cachedRoot) return cachedRoot;
+        const cachedIndex = await caches.match('/index.html');
+        if (cachedIndex) return cachedIndex;
         const fallback = await caches.match('/html/error/404.html');
         return fallback || new Response('<h1>Offline</h1>', { headers: { 'Content-Type': 'text/html' } });
       }
