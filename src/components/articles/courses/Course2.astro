@@ -8,18 +8,19 @@
     itemscope
     itemtype="https://schema.org/Course"
 >
-    <h3>
+    <h3 id="certification-course" itemprop="name">
         <i class="fas fa-certificate" aria-hidden="true"></i>
         <span itemprop="name">
-            Certificate in Arabic
+            <strong>Certificate Course</strong>
         </span>
     </h3>
-    <p itemprop="description">
-        <strong>Certificate in Arabic Course</strong> – for Aalim / Aalima
-    </p>
     <span class="duration" itemprop="timeRequired">Duration: 3 Years</span>
 </article>
 
 <style>
     @import "../../../styles/academics-page.css";
+
+    #certification-course {
+        color : var(--academics-subtitle2-color);
+    }
 </style>

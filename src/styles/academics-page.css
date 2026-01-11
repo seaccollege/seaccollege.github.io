@@ -334,7 +334,7 @@ h2::after {
 }
 
 .program-card .duration {
-    color: var(--secondary-color);
+    color: var(--duration-color);
     font-weight: bold;
     font-size: 0.9rem;
     display: inline-block;
