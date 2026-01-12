@@ -1,3 +1,3 @@
 cd ..
-pnpm install @fortawesome/fontawesome-free --save
-pnpm run copy:fontawesome
+bun add @fortawesome/fontawesome-free
+bun run copy:fontawesome

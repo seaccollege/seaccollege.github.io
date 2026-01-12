@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Foundation in Ulama Studies",
+        "icon": "fas fa-seedling",
+        "color": {
+            "light": "#1E90FF",
+            "dark": "#85b0e5"
+        }
+    },
+    {
+        "name": "Certificate in Ulama Studies",
+        "icon": "fas fa-certificate",
+        "color": {
+            "light": "#2E8B57",
+            "dark": "#70e2a9"
+        }
+    },
+    {
+        "name": "Diploma in Ulama Studies",
+        "icon": "fas fa-award",
+        "color": {
+            "light": "#603ba9",
+            "dark": "#b496f1"
+        }
+    },
+    {
+        "name": "Bachelor's Degree Pathway (Academic Guidance Only)",
+        "icon": "fas fa-graduation-cap",
+        "color": {
+            "light": "#FF8C00",
+            "dark": "#f1a486"
+        }
+    },
+    {
+        "name": "Master Degree Pathway (Academic Guidance Only)",
+        "icon": "fas fa-user-graduate",
+        "color": {
+            "light": "#63633b",
+            "dark": "#e7e798"
+        }
+    },
+    {
+        "name": "Doctorate (PhD) Pathway (Academic Guidance Only)",
+        "icon": "fas fa-user-tie",
+        "color": {
+            "light": "#87274a",
+            "dark": "#f78bb2"
+        }
+    }
+]

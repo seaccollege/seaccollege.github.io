@@ -55,14 +55,38 @@ function setSafeLocalStorage(key, value) {
 // Theme Toggle
 const themeToggle = document.getElementById('themeToggle');
 const html = document.documentElement;
-const themeIcon = themeToggle.querySelector('i');
 
-// Check for saved theme preference or default to 'light' mode
-const currentTheme = getSafeLocalStorage('theme', 'light');
+// Apply saved theme preference (or default to 'dark') immediately
+const currentTheme = getSafeLocalStorage('theme', 'dark');
 html.setAttribute('data-theme', currentTheme);
-updateThemeIcon(currentTheme);
 
-themeToggle.addEventListener('click', () => {
+// Apply per-element color variables to ensure scoped components reflect theme
+function applyPerElementTheme(theme) {
+    document.querySelectorAll('.program-card').forEach(el => {
+        const style = el.style;
+        // iterate inline custom properties and look for any --*-color-light / --*-color-dark
+        for (let i = 0; i < style.length; i++) {
+            const prop = style[i]; // e.g. --crs-color-light or --dept-color-dark
+            if (!prop) continue;
+            if (prop.endsWith('-color-light') || prop.endsWith('-color-dark')) {
+                const base = prop.replace(/-(light|dark)$/, ''); // --crs-color
+                const light = style.getPropertyValue(base + '-light').trim();
+                const dark = style.getPropertyValue(base + '-dark').trim();
+                const value = (theme === 'dark') ? (dark || light) : (light || dark);
+                if (value) style.setProperty(base, value);
+            }
+        }
+    });
+}
+
+applyPerElementTheme(currentTheme);
+
+// If the toggle button exists, wire up icon and click handler.
+if (themeToggle) {
+    const themeIcon = themeToggle.querySelector('i');
+    updateThemeIcon(currentTheme, themeIcon);
+
+    themeToggle.addEventListener('click', () => {
     const theme = html.getAttribute('data-theme');
     const newTheme = theme === 'light' ? 'dark' : 'light';
 
@@ -72,22 +96,32 @@ themeToggle.addEventListener('click', () => {
         const displayName = newTheme === 'dark' ? '🌙 Dark mode' : '☀️ Light mode';
         showToast(`${displayName} enabled`, 'success', 3000);
     }
-    updateThemeIcon(newTheme);
+        updateThemeIcon(newTheme, themeIcon);
 
-    // Add animation effect
-    themeToggle.style.transform = 'rotate(360deg)';
-    setTimeout(() => {
-        themeToggle.style.transform = '';
-    }, 300);
-});
+        // Update per-element colors so inline --crs-color overrides CSS cascade.
+        applyPerElementTheme(newTheme);
 
-function updateThemeIcon(theme) {
+        // Add animation effect
+        themeToggle.style.transform = 'rotate(360deg)';
+        setTimeout(() => {
+            themeToggle.style.transform = '';
+        }, 300);
+    });
+} else {
+    // No toggle found in DOM: try updating any matching icon node if present
+    const potentialIcon = document.querySelector('.theme-toggle i');
+    if (potentialIcon) updateThemeIcon(currentTheme, potentialIcon);
+}
+
+function updateThemeIcon(theme, iconEl) {
+    const el = iconEl || document.querySelector('.theme-toggle i');
+    if (!el) return;
     if (theme === 'dark') {
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
+        el.classList.remove('fa-moon');
+        el.classList.add('fa-sun');
     } else {
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
+        el.classList.remove('fa-sun');
+        el.classList.add('fa-moon');
     }
 }
 

@@ -1,8 +1,6 @@
 ---
-import Publications1 from "./Publications1.astro";
-import Publications2 from "./Publications2.astro";
-import Publications3 from "./Publications3.astro";
 import UnderProcess from "../../angular/under-process/under-process.component.html";
+import PublicationsLinks from "../../vue/PublicationsLinks.vue";
 ---
 
 <section id="programs" aria-labelledby="programs-title">
@@ -11,9 +9,7 @@ import UnderProcess from "../../angular/under-process/under-process.component.ht
         The college provides high-quality learning resources to support both
         students and teachers: <UnderProcess />
         <div class="programs-grid" role="list">
-            <Publications1 />
-            <Publications2 />
-            <Publications3 />
+            <PublicationsLinks/>
         </div>
     </p>
 </section>

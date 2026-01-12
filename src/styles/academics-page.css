@@ -277,7 +277,7 @@ h2::after {
 
 .program-card {
     background: var(--card-bg);
-    padding: 2rem;
+    padding: 1.3rem;
     border-radius: 15px;
     box-shadow: 0 5px 15px var(--card-shadow);
     transition: all var(--transition-speed) ease;
@@ -314,7 +314,7 @@ h2::after {
 .program-card h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     transition: color var(--transition-speed);
 }
 

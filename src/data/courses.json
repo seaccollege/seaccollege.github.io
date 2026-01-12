@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Foundation Course",
+        "icon": "fas fa-book-open",
+        "color": {
+            "light": "#a58a00",
+            "dark": "#ffe066"
+        },
+        "duration": 5
+    },
+    {
+        "name": "Certificate Course",
+        "icon": "fas fa-certificate",
+        "color": {
+            "light": "#a40f2d",
+            "dark": "#ff5252"
+        },
+        "duration": 3
+    },
+    {
+        "name": "Diploma Course",
+        "icon": "fas fa-graduation-cap",
+        "color": {
+            "light": "#017d41",
+            "dark": "#69f0ae"
+        },
+        "duration": 5
+    }
+]

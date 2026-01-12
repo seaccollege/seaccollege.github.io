@@ -1,0 +1,2 @@
+cd ..
+bun run build

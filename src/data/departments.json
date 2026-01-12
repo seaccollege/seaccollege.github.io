@@ -1,0 +1,42 @@
+[
+    {
+        "name": "College Development & Planning Department",
+        "icon": "fas fa-drafting-compass",
+        "color": {
+            "light": "#1E90FF",
+            "dark": "#85b0e5"
+        }
+    },
+    {
+        "name": "Quality Assurance & Curriculum Development Department",
+        "icon": "fas fa-shield-alt",
+        "color": {
+            "light": "#268455",
+            "dark": "#70e2a9"
+        }
+    },
+    {
+        "name": "Student Services & Admission Department",
+        "icon": "fas fa-user-graduate",
+        "color": {
+            "light": "#603ba9",
+            "dark": "#b496f1"
+        }
+    },
+    {
+        "name": "Academic Affairs Department",
+        "icon": "fas fa-chalkboard-teacher",
+        "color": {
+            "light": "#c74613",
+            "dark": "#f1a486"
+        }
+    },
+    {
+        "name": "International Relations & University Communication Department",
+        "icon": "fas fa-globe",
+        "color": {
+            "light": "#63633b",
+            "dark": "#e7e798"
+        }
+    }
+]

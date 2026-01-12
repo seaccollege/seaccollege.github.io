@@ -1,18 +1,18 @@
 {
   "name": "seaccollege",
   "type": "module",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "scripts": {
     "dev": "astro dev",
     "dev:no-cache": "astro dev --no-cache",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "pnpm-update": "pnpm add -g pnpm",
-    "clear": "pnpm store prune",
+    "bun-update": "bun upgrade",
+    "clear": "bun cache clean",
     "npm-clear": "npm cache clean --force",
-    "pnpm-install": "pnpm install",
-    "astro-upgrade": " pnpm dlx @astrojs/upgrade",
+    "bun-install": "bun install",
+    "astro-upgrade": "bunx @astrojs/upgrade",
     "copy:fontawesome": "node scripts/copy-fontawesome.js"
   },
   "dependencies": {

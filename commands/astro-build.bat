@@ -1,2 +1,0 @@
-cd ..
-pnpm run build

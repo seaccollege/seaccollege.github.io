@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Textbooks",
+        "icon": "fas fa-book",
+        "color": {
+            "light": "#1E90FF",
+            "dark": "#85b0e5"
+        }
+    },
+    {
+        "name": "Teacher's Guide",
+        "icon": "fas fa-chalkboard-teacher",
+        "color": {
+            "light": "#268455",
+            "dark": "#70e2a9"
+        }
+    },
+    {
+        "name": "Learning Resources",
+        "icon": "fas fa-book-reader",
+        "color": {
+            "light": "#603ba9",
+            "dark": "#b496f1"
+        }
+    },
+    {
+        "name": "Digital Publications",
+        "icon": "fas fa-tablet-alt",
+        "color": {
+            "light": "#c74613",
+            "dark": "#f1a486"
+        }
+    },
+    {
+        "name": "Research & Reference Materials",
+        "icon": "fas fa-bookmark",
+        "color": {
+            "light": "#63633b",
+            "dark": "#e7e798"
+        }
+    }
+]

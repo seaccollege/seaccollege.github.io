@@ -1,0 +1,50 @@
+﻿[
+    {
+        "name": "Academic Calendar",
+        "icon": "fas fa-calendar-alt",
+        "color": {
+            "light": "#2E8B57",
+            "dark": "#8FE5B9"
+        }
+    },
+    {
+        "name": "Exam Timetable / Schedule",
+        "icon": "fas fa-clock",
+        "color": {
+            "light": "#FF8C00",
+            "dark": "#FFB673"
+        }
+    },
+    {
+        "name": "Results & Grades",
+        "icon": "fas fa-clipboard-list",
+        "color": {
+            "light": "#1E90FF",
+            "dark": "#79BFFF"
+        }
+    },
+    {
+        "name": "Past Papers / Sample Papers",
+        "icon": "fas fa-file-alt",
+        "color": {
+            "light": "#6A5ACD",
+            "dark": "#A899FF"
+        }
+    },
+    {
+        "name": "Online Exam Portal / Registration",
+        "icon": "fas fa-laptop",
+        "color": {
+            "light": "#C62828",
+            "dark": "#FF8A80"
+        }
+    },
+    {
+        "name": "Examination Policies",
+        "icon": "fas fa-gavel",
+        "color": {
+            "light": "#4F5866",
+            "dark": "#B7C9D9"
+        }
+    }
+]

@@ -19,19 +19,16 @@
     --under-process-color: #007bff;
 
     /* Academics Page Color */
-    --academics-title-color: #ff5722;
-    --academics-title-secondary-color: #ff7043;
+    --academics-title-color: #c74613;
+    --academics-title-secondary-color: #ec6d3b;
     --academics-header-gradient: linear-gradient(90deg, var(--academics-title-color), var(--academics-title-secondary-color));
 
-    --academics-subtitle1-color: #a58a00;
-    --academics-subtitle2-color: #a40f2d;
-    --academics-subtitle3-color: #017d41;
 
-    --duration-color: #555555;
+    --duration-color: #f019ac;
 }
 
 [data-theme="dark"] {
-    /* Dark mode colors */
+    /* Dark mode colors */  
     --primary-color: #4a5fb8;
     --secondary-color: #9370db;
     --bg-color: #1a1a2e;
@@ -48,15 +45,11 @@
     --under-process-color: #66b2ff;
 
     /* Academics Page Color */
-    --academics-title-color: #ff8a50;
-    --academics-title-secondary-color: #ff7043;
+    --academics-title-color: #ca9884;
+    --academics-title-secondary-color: #f1a486;
     --academics-header-gradient: linear-gradient(90deg, var(--academics-title-color), var(--academics-title-secondary-color));
 
-    --academics-subtitle1-color: #ffe066;
-    --academics-subtitle2-color: #ff5252;
-    --academics-subtitle3-color: #69f0ae;
-
-    --duration-color: #cccccc;
+    --duration-color: #ea7cc7;
 }
 
 * {
