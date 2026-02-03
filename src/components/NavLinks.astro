@@ -1,17 +1,20 @@
 ---
 import ThemeToggle from "./widgets/theme-toggle.svelte";
+import AdmissionOffline from "./angular/admission-offline/admission-offline.component.html";
 ---
 
 <ul class="nav-links" role="list" id="navLinks">
     <li><a href="/">Home</a></li>
     <li><a href="/about">About</a></li>
     <li><a href="/academics">Academics</a></li>
-    <li><a href="https://seaccollege.netlify.app">Admission</a></li>
+    <li><a id="admissionLink" href="https://seaccollege.netlify.app" rel="noopener">Admission</a></li>
     <!-- <li><a href="#contact">Contact</a></li> -->
     <li>
         <ThemeToggle />
     </li>
 </ul>
+
+<AdmissionOffline />
 
 <style>
     @import "../styles/navLinks.css";

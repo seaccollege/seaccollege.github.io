@@ -1,0 +1,23 @@
+.offline-admission-modal{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,0.45);
+  z-index:1200;
+}
+.offline-admission-content{
+  background:#fff;
+  color:#111;
+  padding:1.25rem;
+  border-radius:8px;
+  max-width:420px;
+  width:90%;
+  box-shadow:0 6px 24px rgba(0,0,0,0.2);
+  text-align:left;
+}
+.offline-admission-content h3{margin:0 0 .5rem;font-size:1.05rem}
+.offline-admission-content p{margin:0 0 1rem;font-size:.95rem}
+.offline-actions{display:flex;justify-content:flex-end}
+.offline-actions .btn{background:#1e90ff;color:#fff;border:0;padding:.45rem .75rem;border-radius:6px;cursor:pointer}

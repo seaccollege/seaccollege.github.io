@@ -1,0 +1,39 @@
+<div id="offline-admission-modal" class="offline-admission-modal" hidden role="dialog" aria-modal="true" aria-labelledby="offline-admission-title">
+  <section class="offline-admission-content">
+    <h3 id="offline-admission-title">Admission page not available right now</h3>
+    <p>It looks like you're offline. The Admissions page opens on the live site — connect to the internet and try again.</p>
+    <div class="offline-actions">
+      <button id="offline-close" class="btn">Got it</button>
+    </div>
+  </section>
+</div>
+
+<script>
+  (function(){
+    function isAdmissionLink(a){
+      try{
+        const u = new URL(a.href);
+        return u.hostname.includes('netlify.app') && u.href.includes('seaccollege');
+      }catch(e){return false}
+    }
+
+    const link = document.getElementById('admissionLink');
+    const modal = document.getElementById('offline-admission-modal');
+    const closeBtn = document.getElementById('offline-close');
+
+    if (!link || !modal) return;
+
+    link.addEventListener('click', function(evt){
+      if (!navigator.onLine && isAdmissionLink(this)){
+        evt.preventDefault();
+        modal.hidden = false;
+      }
+    });
+
+    closeBtn && closeBtn.addEventListener('click', function(){
+      modal.hidden = true;
+    });
+
+    window.addEventListener('online', function(){ if(modal) modal.hidden = true; });
+  })();
+</script>
