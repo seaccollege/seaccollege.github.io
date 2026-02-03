@@ -65,14 +65,14 @@
       "short_name": "About",
       "description": "Learn more about us",
       "url": "/about",
-      "icons": [{ "src": "icon-96x96.png", "sizes": "96x96" }]
+          "icons": [{ "src": "images/icon/icon-96x96.png", "sizes": "96x96" }]
     },
     {
       "name": "View Academic Programs",
       "short_name": "Academics",
       "description": "Browse available academic programs",
       "url": "/academics",
-      "icons": [{ "src": "icon-96x96.png", "sizes": "96x96" }]
+          "icons": [{ "src": "images/icon/icon-96x96.png", "sizes": "96x96" }]
     }
   ]
 }
