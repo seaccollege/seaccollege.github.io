@@ -1,7 +1,7 @@
 {
   "name": "seaccollege",
   "type": "module",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "scripts": {
     "dev": "astro dev",
     "dev:no-cache": "astro dev --no-cache",
