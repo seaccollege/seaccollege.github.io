@@ -264,12 +264,14 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// Install PWA prompt
-let deferredPrompt;
+// Install PWA prompt - Store globally for Vue component access
+window.deferredPrompt = null;
 window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
-    deferredPrompt = e;
+    window.deferredPrompt = e;
     console.log('PWA install prompt ready');
+    // Dispatch custom event for Vue component
+    window.dispatchEvent(new CustomEvent('pwa-install-available'));
 });
 
 // Keyboard navigation improvements
