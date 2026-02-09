@@ -2,6 +2,7 @@
 import Social from "./Social.astro";
 import BottomNavLinks from "./BottomNavLinks.astro";
 import ScrollTop from "./widgets/ScrollTop.svelte";
+import GitHubLink from "./links/GitHubLink.svelte";
 
 const year = new Date().getFullYear();
 ---
@@ -25,6 +26,9 @@ const year = new Date().getFullYear();
             <p>
                 <Social />
             </p>
+        </div>
+        <div>
+            <GitHubLink />
         </div>
     </div>
 </footer>
