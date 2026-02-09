@@ -13,4 +13,4 @@ This repository welcomes reports of security vulnerabilities.
 | v5 (1.0.4) | 2026-01-12 | 🟢 Supported | Academics page update |
 | v6 (1.0.5) | 2026-02-03 | 🟢 Supported | Admission part update |
 | v7 (1.0.6) | 2026-02-05 | 🟢 Supported | App Install Feature Add |
-| v8 (1.0.7) | 2026-02-09 | 🟢 Supported | Admission Part Update with Authentication |
+| v8 (1.0.7) | 2026-02-09 | ⚠️ Deprecated | Admission Part Update with Authentication |
