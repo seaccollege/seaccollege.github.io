@@ -13,4 +13,4 @@ This repository welcomes reports of security vulnerabilities.
 | v6 (1.0.5) | 2026-02-03 | 🟢 Supported | Admission part update |
 | v7 (1.0.6) | 2026-02-05 | 🟢 Supported | App Install Feature Add |
 | v8 (1.0.7) | 2026-02-09 | ⚠️ Deprecated | Admission Part Update with Authentication |
-| v8 (1.0.8) | 2026-02-10 | 🟢 Supported | GitHub Server-side Error Fix i.e, https://www.githubstatus.com Done|
+| v9 (1.0.8) | 2026-02-10 | 🟢 Supported | GitHub Server-side Error Fix i.e, https://www.githubstatus.com Done|
