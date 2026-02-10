@@ -1,5 +1,5 @@
 const CACHE_PREFIX = 'seac-college';
-const CACHE_VERSION = 'v1';
+const CACHE_VERSION = 'v9';
 const PRECACHE = `${CACHE_PREFIX}-precache-${CACHE_VERSION}`;
 const RUNTIME = `${CACHE_PREFIX}-runtime-${CACHE_VERSION}`;
 
